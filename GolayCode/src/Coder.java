@@ -49,11 +49,9 @@ public class Coder {
         for(int i = 0; i < columnLength-1; i++){
             if(i != columnLength-2){
                 genMatrix[columnLength + i] =  Integer.parseInt(column + "1",2);
-                //System.out.println("1: "+column + "1");
             }
             else{
                 genMatrix[columnLength + i] =  Integer.parseInt(column + "0",2);
-                //System.out.println("0: "+column + "0");
             }
 
             //System.out.println((columnLength + i)+" "+Integer.toBinaryString(genMatrix[columnLength + i]));
@@ -73,8 +71,8 @@ public class Coder {
             codedVector += Integer.bitCount(decVector & col) % 2;
         }
 
-        System.out.println("Input vector: " + binaryVector);
-        System.out.println("Coded vector: " + codedVector);
+        System.out.println("Input vector: \t\t" + binaryVector);
+        System.out.println("Coded vector: \t\t" + codedVector);
 
         return codedVector;
     }
